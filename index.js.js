@@ -29,7 +29,7 @@ let trainerTips = ["If you're in an area you know you can't beat, you can always
 let helloResponse = Math.floor((Math.random() * replies.length));
 let yourFortune = Math.floor((Math.random() * fortunes.length));	
 let trainerTip = Math.floor((Math.random() * trainerTips.length));	
-let flipACoin = Math.floor((Math.random() * trainerTips.length));	
+let flipACoin = Math.floor((Math.random() * flip.length));	
 	
 if(cmd === `${prefix}hello`){	
 return message.channel.send(replies[helloResponse]);
