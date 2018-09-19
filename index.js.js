@@ -19,6 +19,8 @@ let messageArray = message.content.split("  ");
 let cmd = messageArray[0];
 let args = messageArray.slice(1);
 	
+let flip = ["Heads", "Tails"];	
+	
 let fortunes = ["“The Way Get Started Is To Quit Talking And Begin Doing.” – Walt Disney", "“The Pessimist Sees Difficulty In Every Opportunity. The Optimist Sees Opportunity In Every Difficulty.” – Winston Churchill", "Solitude has its own very strange beauty to it. Liv Tyler", "Biologically speaking, if something bites you, it is more likely to be female. Desmond Morris","If everyone is thinking alike, then somebody isn’t thinking. George S. Patton"];
 	
 let replies = ["Hello", "Hi", "Hey"];
@@ -27,6 +29,7 @@ let trainerTips = ["If you're in an area you know you can't beat, you can always
 let helloResponse = Math.floor((Math.random() * replies.length));
 let yourFortune = Math.floor((Math.random() * fortunes.length));	
 let trainerTip = Math.floor((Math.random() * trainerTips.length));	
+let flipACoin = Math.floor((Math.random() * trainerTips.length));	
 	
 if(cmd === `${prefix}hello`){	
 return message.channel.send(replies[helloResponse]);
@@ -128,14 +131,15 @@ return message.channel.send(trainerTips[trainerTip]);
 	
 }	
 	
+if(cmd === `${prefix}coin`){	
+return message.channel.send(flip[flipACoin]);	
+	
 if(cmd === `${prefix}help`){	
 	
 let botembed = new Discord.RichEmbed()
 .setDescription("MythBot help menu page 1")
 .setColor("0000FF")
-.addField("m!help","The first page of commands")
 .addField("m!help 2","The second page of commands")
-.addField ("m!help 3","The third page of commands")
 .addField ("m!hello","To say hello")
 .addField ("m!lady","Self explanitory")
 .addField ("m!daily","To recieve your daily tokens?")
@@ -143,6 +147,7 @@ let botembed = new Discord.RichEmbed()
 .addField ("m!axmoefoe","For a spicy meme")
 .addField ("m!bunny","For a cool bunny")
 .addField ("m!picture","For information on the profile picture")
+.addField ("m!coin","Flip a coin")
 
 return message.channel.send(botembed);
 }
@@ -153,7 +158,6 @@ let botembed = new Discord.RichEmbed()
 .setDescription("MythBot help menu page 2")
 .setColor("0000FF")
 .addField("m!help","The first page of commands")
-.addField("m!help 2","The second page of commands")
 .addField ("m!help 3","The third page of commands")
 .addField ("m!complain","For hardcore complainers")
 .addField ("m!om","More memes by Dirtface")
@@ -171,9 +175,7 @@ if(cmd === `${prefix}help 3`){
 let botembed = new Discord.RichEmbed()
 .setDescription("MythBot help menu page 3")
 .setColor("0000FF")
-.addField("m!help","The first page of commands")
 .addField("m!help 2","The second page of commands")
-.addField ("m!help 3","The third page of commands")
 .addField ("m!doc","For Pokemon Myths Development List")
 .addField ("m!unk","Munk")
 .addField ("m!lifeisfun","More expresso, less depresso")
