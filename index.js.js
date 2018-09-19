@@ -133,6 +133,8 @@ return message.channel.send(trainerTips[trainerTip]);
 	
 if(cmd === `${prefix}coin`){	
 return message.channel.send(flip[flipACoin]);	
+
+}
 	
 if(cmd === `${prefix}help`){	
 	
@@ -187,7 +189,7 @@ let botembed = new Discord.RichEmbed()
 return message.channel.send(botembed);
 }	
 	
-};
+});
 
 bot.login(botconfig.token);	
 app.listen(port);
