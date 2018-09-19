@@ -187,7 +187,7 @@ let botembed = new Discord.RichEmbed()
 return message.channel.send(botembed);
 }	
 	
-});
+};
 
 bot.login(botconfig.token);	
 app.listen(port);
