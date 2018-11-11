@@ -135,6 +135,11 @@ if(cmd === `${prefix}coin`){
 return message.channel.send(flip[flipACoin]);	
 
 }
+
+if(cmd === `${prefix}fbi`){	
+return message.channel.send("FBI open up!");	
+
+}
 	
 if(cmd === `${prefix}help`){	
 	
