@@ -26,6 +26,10 @@ let fortunes = ["“The Way Get Started Is To Quit Talking And Begin Doing.” �
 let replies = ["Hello", "Hi", "Hey"];
 	
 let trainerTips = ["If you're in an area you know you can't beat, you can always follow Snake's moves and stealth through the area", "Remember to always save before you fight a legendary Pokemon!", "Always carry a few Pokeballs around, you never know if you might find a shiny!","Pokemon will gain less experience when battling an enemy of a lower level", "Carry Heavy Balls to legendary fights, most legendaries are heavy so it's the best chance at catching them without a Master Ball!","Ice is a very frail type, never try to stall with one unless it has absurd defenses or a certain useful ability","Be aware of your Pokemon's strengths and weaknesses to make the best strategy you can", "You moves with a STAB bonus when you can", "Give all your Pokemon items. Even if it's only a berry","Always keep check of your team's type composition, make sure no one type can wipe your whole team out!", "Try not to double up on type coverage in your team"]	
+
+let doggoPictures = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI5AcefHo-BDNJiijvDZqEKqpNoebFWBkpH9YTkubbXxgqcC-L", "https://pbs.twimg.com/profile_images/828073361397932032/eKTigt-2_400x400.jpg", "https://data.whicdn.com/images/293182173/superthumb.jpg?t=1501286905", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdD-L8LX_brly3nAYnH_ZPw4g7ALxuQcb9injwk2AEHdlXpNxw-g", "https://i.ytimg.com/vi/2Bm4H33xC9s/maxresdefault.jpg", "https://i.ytimg.com/vi/alJHDHo9nMA/hqdefault.jpg", "https://pbs.twimg.com/profile_images/972443397741932544/ZYjQQfmR.jpg"]
+
+let doggoPicture = Math.floor((Math.random() * doggoPictures.length));
 let helloResponse = Math.floor((Math.random() * replies.length));
 let yourFortune = Math.floor((Math.random() * fortunes.length));	
 let trainerTip = Math.floor((Math.random() * trainerTips.length));	
@@ -141,6 +145,11 @@ return message.channel.send("FBI open up!");
 
 }
 	
+if(cmd === `${prefix}doggo`){
+return message.channel.send(doggoPictures[doggoPicture]);
+	
+}		
+	
 if(cmd === `${prefix}help`){	
 	
 let botembed = new Discord.RichEmbed()
@@ -190,6 +199,7 @@ let botembed = new Discord.RichEmbed()
 .addField ("m!feed sally","Only used on Myths server")
 .addField ("m!fortune","For a quote that makes you think")
 .addField ("m!trainertip","To get advice in being a good trainer!")
+.addField ("m!doggo", "Pictures of cute doggos")
 
 return message.channel.send(botembed);
 }	
