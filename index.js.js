@@ -56,7 +56,7 @@ return message.channel.send("You received your 200 dai... wait wrong bot");
 }
 	
 if(cmd === `${prefix}axmoefoe`){
-return message.channel.send("finally caught up with maxmoefoe. He spent 15 months promising us a main channel video but then just started opening pokemon cards and dating his dog. Great entertainer he is");
+return message.channel.send("Finally caught up with maxmoefoe. He spent 15 months promising us a main channel video but then just started opening pokemon cards and dating his dog. Great entertainer he is");
 	
 }
 
@@ -66,7 +66,7 @@ return message.channel.send("https://media.discordapp.net/attachments/4461730594
 }	
 	
 if(cmd === `${prefix}picture`){
-return message.channel.send("My profile picture was created by Sheebit!");
+return message.channel.send("My profile picture was created by Chicoatl!");
 	
 }
 	
@@ -99,11 +99,7 @@ if(cmd === `${prefix}thisissosad`){
 return message.channel.send("https://youtu.be/-tsBp26NXz0");
 	
 }
-	
-if(cmd === `${prefix}doc`){
-return message.channel.send("https://docs.google.com/spreadsheets/d/1-BGQySOKMUKAmTjSTVEUp0LpHElaLYSdSw46ids3O_0/edit");
-	
-}	
+		
 	
 if(cmd === `${prefix}unk`){
 return message.channel.send("https://media.discordapp.net/attachments/461054056438431744/466880028848685056/triggered.gif?width=226&height=301");
@@ -192,7 +188,6 @@ let botembed = new Discord.RichEmbed()
 .setDescription("MythBot help menu page 3")
 .setColor("0000FF")
 .addField("m!help 2","The second page of commands")
-.addField ("m!doc","For Pokemon Myths Development List")
 .addField ("m!unk","Munk")
 .addField ("m!lifeisfun","More expresso, less depresso")
 .addField ("m!r rogers","I should make a seperate bot")
