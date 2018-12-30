@@ -86,7 +86,7 @@ return message.channel.send("You are now banned");
 }
 	
 if(cmd === `${prefix}oof`){
-return message.channel.send("https://www.youtube.com/watch?v=dc37mCFyqUg");
+return message.channel.send("https://www.youtube.com/watch?v=1Ixj2RV4dac");
 	
 }
 	
