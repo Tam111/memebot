@@ -10,7 +10,7 @@
   "description": "",
   "dependencies": {
     "discord.js": "^11.3.2",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "forever": "^0.15.3",
     "forever-monitor": "^1.7.1"
   }
